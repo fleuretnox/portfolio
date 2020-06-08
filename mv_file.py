@@ -20,15 +20,15 @@ dest_server = r'C:\Users\huhl\Desktop\devops\portfolio\dest_server' + '\\'
 # create a function to move files
 # 2 parameters to have source and dest path
 def mv_files (sourcepath, dest_server):
-        for (path, dirs, files) in os.walk(src_server):
-            for all_file in files:  #any files you see on that path source server
+    for (path, dirs, files) in os.walk(src_server):
+        #for all_file in files:  #any files you see on that path source server
                 #if the file doesn't exist on the given path
-                if not os.path.isfile(dest_server + all_file):
+            if not files in os.path.isfile(dest_server + files):
                     #move the folder
-                    shutil.move(path + '\\' + all_file, dest_server)
-                    print ("all files were moved")
-                else:
-                    print ("files not found")
+                shutil.move(path + '\\' + files)
+                print ("all files were moved")
+            else:
+                print ("files not found")
 
 
 mv_files (src_server, dest_server)
