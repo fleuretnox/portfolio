@@ -4,8 +4,8 @@ from time import sleep
 
 PATH = r'C:\Program Files\tmp\chromedriver.exe'
 
-url = 'https://github.com/fleuretfreya/portfolio'
-with open (r'C:\Users\huhl\Desktop\devops\portfolio\extract_server\may_ext.csv', 'w') as createcsv:
+
+with open ('may_ext.csv', 'w') as createcsv:
      createcsv.write("Day Scheduled_Flights Tracked_Flights \n")
 
 driver = webdriver.Chrome(PATH)
