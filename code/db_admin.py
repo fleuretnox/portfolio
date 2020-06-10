@@ -3,8 +3,8 @@ import shutil
 
 ##https://www.youtube.com/watch?v=YT8UMQAJVnE
 # We want to have a source and destinational path to move from one place to another
-src_server = r'C:\Users\huhl\Desktop\devops\portfolio\src_server' + '\\'
-dest_server = r'C:\Users\huhl\Desktop\devops\portfolio\dest_server' + '\\'
+src_server = r'C:\Users\huhl\Desktop\devops\portfolio\Backup Server' + '\\'
+dest_server = r'C:\Users\huhl\Desktop\devops\portfolio\DR Server' + '\\'
 
 # '\\' to make folder variable
 
