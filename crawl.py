@@ -1,6 +1,7 @@
 from selenium import webdriver
 from time import sleep
 
+
 PATH = r'C:\Program Files\tmp\chromedriver.exe'
 
 with open (r'C:\Users\huhl\Desktop\devops\portfolio\extract_server\may_ext.csv', 'w') as createcsv:
@@ -23,7 +24,6 @@ table_list = driver.find_elements_by_xpath('//*[@id="highcharts-data-table-0"]/t
 #table_list2 = driver.find_elements_by_xpath('//*[@id="highcharts-data-table-0"]/thead/tr/th[2]')
 
 num_of_flights = len(table_list)
-
 with open (r'C:\Users\huhl\Desktop\devops\portfolio\extract_server\may_ext.csv', 'a') as createcsv:
         for iteration_list in range(num_of_flights):
             createcsv.write(table_list[iteration_list].text)
