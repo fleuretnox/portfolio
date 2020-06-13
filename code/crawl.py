@@ -5,9 +5,10 @@ from time import sleep
 PATH = r'C:\Program Files\tmp\chromedriver.exe'
 driver = webdriver.Chrome(PATH)
 
-#Create a csv with given columns
+#Create a csv with given column
+
 with open ('Extract_Server\May_Ext.csv', 'w') as createcsv:
-     createcsv.write("Day Scheduled_Flights Tracked_Flights \n")
+    createcsv.write("Day Scheduled_Flights Tracked_Flights \n")
 
 #Stat Site
 driver.get('https://www.flightradar24.com/data/airports/jfk/statistics')

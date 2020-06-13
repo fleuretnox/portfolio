@@ -10,3 +10,5 @@ dr_path = pathlib.Path('DR Server')
 class MoveFile:
     for file in backup_path:
         shutil.copy(str(file), str(dr_path))
+
+print ("DR Has Been Backed Up Successfully")
