@@ -2,7 +2,7 @@ from crawl import *
 from transform import *
 from load import *
 # from forecasting import *
-from db_admin import *
+# from db_admin import *
 
 
 #crawl.py
@@ -27,8 +27,8 @@ class Load:
      except TypeError:
          print ("Loading Stage Has Failed")
 
-class DR_Move:
-      try:
-         backup_path
-      except TypeError:
-         print ("DR Backup Has Failed")
+# class DR_Move:
+#       try:
+#          backup_path
+#       except TypeError:
+#          print ("DR Backup Has Failed")

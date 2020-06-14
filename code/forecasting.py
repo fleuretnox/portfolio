@@ -2,6 +2,7 @@ import numpy  as np
 from fbprophet import Prophet
 import glob
 import pandas as pd
+from matplotlib import pyplot as plt
 #Fetch csv file (pretend the filename is unknown)
 csv_files = glob.glob('Extract_Server\*.csv')
 
@@ -10,6 +11,7 @@ class Dataframe:
     df = pd.DataFrame()
     df['ds'] = pd.to_datetime(csv_files['Day'])
     df['y'] = csv_files['Tracked_Flights']
+
 
 #
 class For_Prophet:
@@ -22,12 +24,11 @@ class For_Prophet:
 
 
 class Forecast:
+    df=df.rename(columns={'ds':'Date', 'y':'Track'}) #rename ds and y columns
     future = class_model.make_future_dataframe(periods=30, freq = 'd')
     forecast = class_model.predict(future)
     plot1 = class_model.plot(forecast)
 
-class Plot_Forecast:
-    df.to_csv('Forecasting_Server\May_Forecast.csv', index=False)
 
-class BackUp:
-    df.to_csv('Backup Server\May_Forecast_Backup.csv', index=False)
+class Plot_Forecast:
+    plot1.savefig("May_Forecast_Graph.png", dpi=72)
