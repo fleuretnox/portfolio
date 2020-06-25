@@ -10,6 +10,7 @@ Along the way, the project provides a fundamental concept of data warehousing al
 
 Pre-Requisites:
 *Application to run Python with ability to open Pandas, Matplotlib
+* Chrome web browser
 
 
 Steps:
